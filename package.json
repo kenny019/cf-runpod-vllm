@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "dev": "wrangler dev src/index.ts",
+    "upload": "wrangler deploy --name chica-api --minify src/index.ts",
+    "format": "prettier --write --end-of-line=auto \"./**/*.{cjs,js,jsx,ts,tsx,html,css,json}\" --ignore-path .prettierignore",
+    "tail": "wrangler tail chica-api"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.1.9",
+    "hono": "^3.7.2",
+    "zod": "^3.22.4"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20230914.0",
+    "prettier": "^3.0.3",
+    "wrangler": "^3.9.0"
+  }
+}
